@@ -5,8 +5,10 @@ auto solve(int limit) -> void
 	auto first = 1;
 	auto next = 2;
 	auto sum = 0;
-	while (first <= limit) {
-		if (first % 2 == 0) {
+	while (first <= limit) 
+	{
+		if (first % 2 == 0) 
+		{
 			sum += first;
 			std::cout << first << std::endl;
 		}
