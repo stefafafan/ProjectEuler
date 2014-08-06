@@ -1,6 +1,6 @@
 #include <iostream>
 
-void solve(int limit)
+auto solve(int limit) -> void
 {
 	auto first = 1;
 	auto next = 2;
@@ -17,7 +17,7 @@ void solve(int limit)
 	std::cout << "Final sum: " << sum << std::endl;
 }
 
-int main()
+auto main() -> int
 {
 	solve(4000000);
 	return 0;

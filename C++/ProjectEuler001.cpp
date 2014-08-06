@@ -1,6 +1,6 @@
 #include <iostream>
 
-void solve(int limit)
+auto solve(int limit) -> void
 {
 	int sum = 0;
 	for (int index = 0; index < limit; ++index)
@@ -9,7 +9,7 @@ void solve(int limit)
 	std::cout << sum << std::endl;
 }
 
-int main()
+auto main() -> int
 {
 	solve(1000);
 	return 0;
