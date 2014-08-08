@@ -1,6 +1,6 @@
 #include <iostream>
 
-auto solve(int limit) -> void
+auto solve(int limit)
 {
 	auto first = 1;
 	auto next = 2;
