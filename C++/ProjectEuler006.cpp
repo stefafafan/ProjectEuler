@@ -2,9 +2,9 @@
 
 auto squareSumDiff(int num)
 {
-    auto total = 0;
-    auto sum = 0;
-    auto squaresum = 0;
+	auto total = 0;
+	auto sum = 0;
+	auto squaresum = 0;
 
 	for (auto x = 1; x <= num; ++x)
 	{
@@ -13,7 +13,7 @@ auto squareSumDiff(int num)
 	}
 
 	squaresum = total * total;
-    return squaresum - sum;
+	return squaresum - sum;
 }
 
 auto main() -> int
