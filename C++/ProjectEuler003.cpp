@@ -9,7 +9,7 @@ constexpr auto cexprfmod(const double a, const double b)
 
 // TODO: constexpr sqrt.
 
-auto isPrime(double x)
+auto isPrime(const double x)
 {
 	if ((cexprfmod(x, 2) == 0 && x != 2) || (x < 2)) return false;
 
@@ -19,7 +19,7 @@ auto isPrime(double x)
 	return true;
 }
 
-auto getLargestPrimeFactor(double num)
+auto getLargestPrimeFactor(const double num)
 {
 	auto current = 0;
 
