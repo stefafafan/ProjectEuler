@@ -1,13 +1,13 @@
 #include <iostream>
 
 template <typename T>
-constexpr T gcd(T a, T b)
+constexpr T gcd(const T a, const T b)
 {
 	return b ? gcd(b, a % b) : a;
 }
 
 template <typename T>
-constexpr T lcm(T a, T b)
+constexpr T lcm(const T a, const T b)
 {
 	return (a / gcd(a, b)) * b;
 }

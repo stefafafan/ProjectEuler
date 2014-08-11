@@ -1,6 +1,6 @@
 #include <iostream>
 
-constexpr auto squareSumDiff(int num)
+constexpr auto squareSumDiff(const int num)
 {
 	auto total = 0;
 	auto sum = 0;
