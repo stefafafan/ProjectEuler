@@ -1,12 +1,20 @@
 #include <iostream>
 #include <cmath>
 
+// http://d.hatena.ne.jp/scior/20110410/1302442891
+constexpr auto cexprfmod(const double a, const double b)
+{
+	return a - static_cast<int> (a / b) * b;
+}
+
+// TODO: constexpr sqrt.
+
 auto isPrime(double x)
 {
-	if ((fmod(x, 2) == 0 && x != 2) || (x < 2)) return false;
+	if ((cexprfmod(x, 2) == 0 && x != 2) || (x < 2)) return false;
 
 	for (auto i = 3; i <= sqrt(x); i += 2)
-		if (fmod(x, i) == 0) return false;
+		if (cexprfmod(x, i) == 0) return false;
 
 	return true;
 }
@@ -18,7 +26,7 @@ auto getLargestPrimeFactor(double num)
 	for (auto i = 2; i <= sqrt(num); i++)
 	{
 		if (isPrime(i))
-			if (fmod(num, i) == 0) current = i;
+			if (cexprfmod(num, i) == 0) current = i;
 	}
 	
 	return current;
