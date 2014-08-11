@@ -1,6 +1,6 @@
 #include <iostream>
 
-auto solve(int limit)
+constexpr auto solve(const int limit)
 {
 	auto first = 1;
 	auto next = 2;
@@ -8,19 +8,16 @@ auto solve(int limit)
 	while (first <= limit) 
 	{
 		if (first % 2 == 0) 
-		{
 			sum += first;
-			std::cout << first << std::endl;
-		}
 		auto temp = first + next;
 		first = next;
 		next = temp;
 	}
-	std::cout << "Final sum: " << sum << std::endl;
+	return sum;
 }
 
 auto main() -> int
 {
-	solve(4000000);
+	std::cout << solve(4000000) << std::endl;
 	return 0;
 }

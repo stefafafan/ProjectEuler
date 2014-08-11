@@ -1,10 +1,9 @@
 #include <iostream>
 
-auto squareSumDiff(int num)
+constexpr auto squareSumDiff(int num)
 {
 	auto total = 0;
 	auto sum = 0;
-	auto squaresum = 0;
 
 	for (auto x = 1; x <= num; ++x)
 	{
@@ -12,8 +11,7 @@ auto squareSumDiff(int num)
 		sum += (x * x);
 	}
 
-	squaresum = total * total;
-	return squaresum - sum;
+	return (total * total) - sum;
 }
 
 auto main() -> int

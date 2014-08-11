@@ -1,16 +1,16 @@
 #include <iostream>
 
-auto solve(int limit)
+constexpr auto solve(const int limit)
 {
 	auto sum = 0;
 	for (auto index = 0; index < limit; ++index)
 		if (index % 3 == 0 || index % 5 == 0)
 			sum += index;
-	std::cout << sum << std::endl;
+	return sum;
 }
 
 auto main() -> int
 {
-	solve(1000);
+	std::cout << solve(1000) << std::endl;
 	return 0;
 }
